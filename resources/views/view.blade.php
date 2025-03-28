@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Người Dùng</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/view.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="logout.html">Đăng xuất</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Màn hình chi tiết</h2>
+        <div class="user-details">
+            <p><strong>Username:</strong> <span id="username"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+        </div>
+        <button onclick="goToEdit()" class="edit-btn">Chỉnh sửa</button>
+    </div>
+
+    <footer>
+        <p>Lập trình web @2025</p>
+    </footer>
+
+    <script src="js/{{ asset('assets/js/view.js') }}"></script>
+</body>
+</html>
