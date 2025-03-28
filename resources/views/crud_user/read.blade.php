@@ -10,13 +10,17 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Phone</th>
+                            <th>Address</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{{$messi->id}}</td>
-                            <td>{{$messi->name}}</td>
-                            <td>{{$messi->email}}</td>
+                            <td>{{$users->id}}</td>
+                            <td>{{$users->name}}</td>
+                            <td>{{$users->email}}</td>
+                            <td>{{$users->phone}}</td>
+                            <td>{{$users->address}}</td>
                         </tr>
                     </tbody>
                 </table>

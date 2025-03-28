@@ -36,23 +36,3 @@ Route::get('signout', [CrudUserController::class, 'signOut'])->name('signout');
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/', function () {
-    return view('list');
-});
-
-Route::get('/', function () {
-    return view('update');
-});
-
-Route::get('/', function () {
-    return view('resgister');
-});
-
-Route::get('/', function () {
-    return view('update');
-});
-
-Route::get('/', function () {
-    return view('view');
-});

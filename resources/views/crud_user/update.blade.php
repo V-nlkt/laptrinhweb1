@@ -35,6 +35,24 @@
                                     @endif
                                 </div>
 
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Phone" id="phone" class="form-control"
+                                           value="{{ $user->phone }}"
+                                           name="phone" required autofocus>
+                                    @if ($errors->has('phone'))
+                                        <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Address" id="address" class="form-control"
+                                           value="{{ $user->address }}"
+                                           name="address" required autofocus>
+                                    @if ($errors->has('address'))
+                                        <span class="text-danger">{{ $errors->first('address') }}</span>
+                                    @endif
+                                </div>
+
                                 <div class="d-grid mx-auto">
                                     <button type="submit" class="btn btn-dark btn-block">Update</button>
                                 </div>
