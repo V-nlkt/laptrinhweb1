@@ -21,7 +21,7 @@ nav a {
 
 .container {
     background: white;
-    width: 600px;
+    width: 800px; /* Đã tăng chiều rộng để có đủ chỗ cho các cột */
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
@@ -36,23 +36,38 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    table-layout: auto; /* Tự động điều chỉnh kích thước cột */
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: center;
 }
 
 th {
     background-color: #007bff;
     color: white;
+    text-align: center;
 }
 
-td a {
+/* Căn phải nội dung của cột Action */
+td.action {
+    text-align: right;
+    white-space: nowrap; /* Ngăn xuống dòng */
+    padding-right: 10px; /* Thêm khoảng cách bên phải */
+}
+
+/* Tạo khoảng cách ngắn hơn giữa các dấu "|" */
+td.action a {
     text-decoration: none;
     color: blue;
-    margin: 0 5px;
+    display: inline-block;
+    margin: 0 3px; /* Giảm khoảng cách giữa các liên kết */
+}
+
+td.action span.separator {
+    margin: 0 2px; /* Giảm khoảng cách giữa các dấu | */
+    color: #888; /* Màu xám nhạt hơn để dấu | không quá nổi bật */
 }
 
 .pagination {

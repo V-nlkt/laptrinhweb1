@@ -3,62 +3,83 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    padding: 10px 20px;
+    background-color: #e3f2fd;
     text-align: center;
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 15px 0;
-    font-size: 18px;
-}
-
 nav a {
-    color: white;
+    font-size: 16px;
+    margin: 0 15px;
+    color: #007bff;
     text-decoration: none;
-    margin: 0 10px;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container chính */
 .container {
     background: white;
-    width: 400px;
+    width: 80%;
+    max-width: 800px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Makes the container take up the remaining space */
 }
 
+/* Tiêu đề */
 h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.user-details {
+/* Bảng thông tin */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
     text-align: left;
-    margin-top: 15px;
 }
 
-.user-details p {
-    font-size: 18px;
-    margin: 10px 0;
+th {
+    background-color: #007bff;
+    color: white;
 }
 
-.edit-btn {
+/* Nút chỉnh sửa */
+button {
     background: #007bff;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
+    transition: background 0.3s;
 }
 
-.edit-btn:hover {
+button:hover {
     background: #0056b3;
 }
 
+/* Footer */
 footer {
-    margin-top: 20px;
     padding: 10px;
     background: #333;
     color: white;
+    text-align: center;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
