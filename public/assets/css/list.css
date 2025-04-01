@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    width: 100%; /* Đảm bảo body chiếm hết chiều rộng màn hình */
 }
 
 header {
@@ -11,6 +12,8 @@ header {
     color: white;
     padding: 15px 0;
     font-size: 18px;
+    width: 100%; /* Đảm bảo header kéo dài hết chiều rộng */
+    box-sizing: border-box; /* Đảm bảo không có độ rộng thừa do padding */
 }
 
 nav a {
@@ -21,11 +24,14 @@ nav a {
 
 .container {
     background: white;
-    width: 800px; /* Đã tăng chiều rộng để có đủ chỗ cho các cột */
-    margin: 50px auto;
+    width: 100%; /* Đảm bảo container chiếm hết chiều rộng */
+    max-width: 100%; /* Giới hạn container không vượt quá chiều rộng màn hình */
+    margin: 80px auto 20px; /* Tạo khoảng cách trên cho header cố định */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Bật tính năng cuộn ngang khi cần thiết */
+    box-sizing: border-box; /* Đảm bảo không có độ rộng thừa do padding */
 }
 
 h2 {
@@ -36,12 +42,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    table-layout: auto; /* Tự động điều chỉnh kích thước cột */
+    table-layout: auto; /* Tự động điều chỉnh kích thước các cột khi thêm cột mới */
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: left;
+    word-wrap: break-word; /* Đảm bảo văn bản trong bảng không bị tràn ra ngoài */
 }
 
 th {
@@ -50,28 +58,27 @@ th {
     text-align: center;
 }
 
-/* Căn phải nội dung của cột Action */
 td.action {
     text-align: right;
-    white-space: nowrap; /* Ngăn xuống dòng */
-    padding-right: 10px; /* Thêm khoảng cách bên phải */
+    white-space: nowrap;
+    padding-right: 10px;
 }
 
-/* Tạo khoảng cách ngắn hơn giữa các dấu "|" */
 td.action a {
     text-decoration: none;
     color: blue;
     display: inline-block;
-    margin: 0 3px; /* Giảm khoảng cách giữa các liên kết */
+    margin: 0 3px;
 }
 
 td.action span.separator {
-    margin: 0 2px; /* Giảm khoảng cách giữa các dấu | */
-    color: #888; /* Màu xám nhạt hơn để dấu | không quá nổi bật */
+    margin: 0 2px;
+    color: #888;
 }
 
 .pagination {
     margin-top: 15px;
+    text-align: center;
 }
 
 .pagination button {
@@ -93,4 +100,7 @@ footer {
     padding: 10px;
     background: #333;
     color: white;
+    width: 100%; /* Đảm bảo footer kéo dài hết chiều rộng */
+    position: relative;
+    box-sizing: border-box; /* Đảm bảo không có độ rộng thừa do padding */
 }

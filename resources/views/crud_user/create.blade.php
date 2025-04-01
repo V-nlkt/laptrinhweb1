@@ -19,7 +19,7 @@
             <form action="{{ route('user.postUser') }}" method="POST" onsubmit="return validateRegisterForm()">
                 @csrf
                 <div class="input-group">
-                    <label for="name">Họ và Tên</label>
+                    <label for ="name">Họ và Tên</label>
                     <input type="text" id="name" name="name" required autofocus>
                     @if ($errors->has('name'))
                         <span class="text-danger">{{ $errors->first('name') }}</span>
@@ -53,6 +53,7 @@
                         <span class="text-danger">{{ $errors->first('address') }}</span>
                     @endif
                 </div>
+                
                 <div class="extra-links">
                     <a href="{{ route('login') }}">Đã có tài khoản</a>
                 </div>
