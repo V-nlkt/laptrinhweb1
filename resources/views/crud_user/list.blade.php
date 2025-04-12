@@ -22,8 +22,6 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Phone</th>
-                    <th>Address</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -33,8 +31,6 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>{{ $user->phone }}</td>
-                        <td>{{ $user->address }}</td>
                         <td class="action">
                             <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a>
                             <span class="separator">|</span>
