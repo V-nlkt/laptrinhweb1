@@ -100,13 +100,7 @@ nav a {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: auto; 
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    margin-top: 15px;
+    font-size: 14px;
+    color: gray;
 }
-

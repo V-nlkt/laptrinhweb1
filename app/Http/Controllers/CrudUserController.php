@@ -59,6 +59,8 @@ class CrudUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
+            'age' => 'required',
+            'facebook' => 'required',
         ]);
 
         $data = $request->all();

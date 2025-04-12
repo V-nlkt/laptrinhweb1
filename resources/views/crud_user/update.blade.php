@@ -45,7 +45,21 @@
                     @endif
                 </div>
 
-                
+                <div class="form-group mb-3">
+                    <label for="age">Tuổi</label>
+                    <input type="text" id="age" class="form-control" name="age" value="{{ $user->age }}" required autofocus>
+                    @if ($errors->has(''))
+                        <span class="text-danger">{{ $errors->first('age') }}</span>
+                    @endif
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="facebook">Facebook</label>
+                    <input type="facebook" id="facebook" class="form-control" name="facebook" value="{{ $user->facebook }}" required>
+                    @if ($errors->has('facebook'))
+                        <span class="text-danger">{{ $errors->first('facebook') }}</span>
+                    @endif
+                </div>
 
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-dark btn-block">Cập Nhật</button>

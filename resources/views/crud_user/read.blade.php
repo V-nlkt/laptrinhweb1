@@ -24,6 +24,8 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Age</th>
+                    <th>Facebook</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +33,9 @@
                     <td>{{ $messi->id }}</td>
                     <td>{{ $messi->name }}</td>
                     <td>{{ $messi->email }}</td>
+                    <td>{{ $messi->age }}</td>
+                    <td>{{ $messi->facebook }}</td>
+
                 </tr>
             </tbody>
         </table>

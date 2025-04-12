@@ -40,6 +40,22 @@
                     @endif
                 </div>
                 
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="age" id="age" name="age" required>
+                    @if ($errors->has('age'))
+                        <span class="text-danger">{{ $errors->first('age') }}</span>
+                    @endif
+                </div>
+
+                <div class="input-group">
+                    <label for ="facebook">Facebook</label>
+                    <input type="text" id="name" name="name" required autofocus>
+                    @if ($errors->has('name'))
+                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                    @endif
+                </div>
+
                 <div class="extra-links">
                     <a href="{{ route('login') }}">Đã có tài khoản</a>
                 </div>
