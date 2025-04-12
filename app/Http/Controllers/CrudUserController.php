@@ -59,8 +59,6 @@ class CrudUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
-            'phone' => 'required',
-            'address' => 'required',
         ]);
 
         $data = $request->all();
@@ -68,8 +66,6 @@ class CrudUserController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'phone' => $data['phone'],
-            'address' => $data['address'],
         ]);
 
         return redirect("login");
@@ -117,17 +113,13 @@ class CrudUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,id,'.$input['id'],
             'password' => 'required|min:6',
-            'phone' => 'required',
-            'address' => 'required',
         ]);
 
        $user = User::find($input['id']);
        $user->name = $input['name'];
        $user->email = $input['email'];
        $user->password = Hash::make($input['password']);
-       $user->phone = $input['phone'];
-       $user->address = $input['address'];
-
+      
        $user->save();
 
         return redirect("list")->withSuccess('You have signed-in');

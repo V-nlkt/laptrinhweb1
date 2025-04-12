@@ -39,20 +39,6 @@
                         <span class="text-danger">{{ $errors->first('password') }}</span>
                     @endif
                 </div>
-                <div class="input-group">
-                    <label for="phone">Số điện thoại</label>
-                    <input type="text" id="phone" name="phone" required>
-                    @if ($errors->has('phone'))
-                        <span class="text-danger">{{ $errors->first('phone') }}</span>
-                    @endif
-                </div>
-                <div class="input-group">
-                    <label for="address">Địa chỉ</label>
-                    <input type="text" id="address" name="address" required>
-                    @if ($errors->has('address'))
-                        <span class="text-danger">{{ $errors->first('address') }}</span>
-                    @endif
-                </div>
                 
                 <div class="extra-links">
                     <a href="{{ route('login') }}">Đã có tài khoản</a>
