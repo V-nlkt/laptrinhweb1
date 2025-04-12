@@ -115,11 +115,12 @@ p a:hover {
 
 /* Footer */
 footer {
-    margin-top: 20px;
-    padding: 10px;
-    background: white;
-    color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto; 
+    background: #333;
+    color: #fff;
     text-align: center;
-    font-size: 14px;
-    border-top: 1px solid black;
+    padding: 20px 0;
 }

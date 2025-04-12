@@ -45,21 +45,7 @@
                     @endif
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="phone">Số điện thoại</label>
-                    <input type="text" id="phone" class="form-control" name="phone" value="{{ $user->phone }}" required>
-                    @if ($errors->has('phone'))
-                        <span class="text-danger">{{ $errors->first('phone') }}</span>
-                    @endif
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="address">Địa chỉ</label>
-                    <input type="text" id="address" class="form-control" name="address" value="{{ $user->address }}" required>
-                    @if ($errors->has('address'))
-                        <span class="text-danger">{{ $errors->first('address') }}</span>
-                    @endif
-                </div>
+                
 
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-dark btn-block">Cập Nhật</button>
