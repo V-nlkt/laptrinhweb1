@@ -68,6 +68,8 @@ class CrudUserController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'age' => $data['age'],
+            'facebook' => $data['facebook'],
         ]);
 
         return redirect("login");
@@ -115,12 +117,16 @@ class CrudUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,id,'.$input['id'],
             'password' => 'required|min:6',
+            'age' => 'required',
+            'facebook' => 'required',
         ]);
 
        $user = User::find($input['id']);
        $user->name = $input['name'];
        $user->email = $input['email'];
        $user->password = Hash::make($input['password']);
+       $user->age = $input['age'];
+       $user->facebook = $input['facebook'];
 
        $user->save();
 

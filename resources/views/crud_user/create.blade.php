@@ -50,9 +50,9 @@
 
                 <div class="input-group">
                     <label for ="facebook">Facebook</label>
-                    <input type="text" id="name" name="name" required autofocus>
-                    @if ($errors->has('name'))
-                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                    <input type="facebook" id="facebook" name="facebook" required autofocus>
+                    @if ($errors->has('facebook'))
+                        <span class="text-danger">{{ $errors->first('facebook') }}</span>
                     @endif
                 </div>
 
