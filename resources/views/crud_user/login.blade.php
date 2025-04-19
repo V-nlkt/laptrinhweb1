@@ -32,6 +32,8 @@
                         <span class="text-danger">{{ $errors->first('password') }}</span>
                     @endif
                 </div>
+
+
                 <div class="remember">
                     <input type="checkbox" name="remember" id="remember"> <label for="remember">Ghi nhớ đăng nhập</label>
                 </div>

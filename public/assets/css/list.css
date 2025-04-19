@@ -1,106 +1,141 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f4f8;
     margin: 0;
     padding: 0;
-    text-align: center;
-    width: 100%; /* Đảm bảo body chiếm hết chiều rộng màn hình */
 }
 
+/* Header */
 header {
-    background: #333;
+    background: #0d6efd;
+    padding: 1rem 0;
     color: white;
-    padding: 15px 0;
-    font-size: 18px;
-    width: 100%; /* Đảm bảo header kéo dài hết chiều rộng */
-    box-sizing: border-box; /* Đảm bảo không có độ rộng thừa do padding */
 }
 
-nav a {
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    font-weight: 500;
 }
 
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
 .container {
     background: white;
-    width: 100%; /* Đảm bảo container chiếm hết chiều rộng */
-    max-width: 100%; /* Giới hạn container không vượt quá chiều rộng màn hình */
-    margin: 80px auto 20px; /* Tạo khoảng cách trên cho header cố định */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Bật tính năng cuộn ngang khi cần thiết */
-    box-sizing: border-box; /* Đảm bảo không có độ rộng thừa do padding */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
 }
 
 h2 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-    table-layout: auto; /* Tự động điều chỉnh kích thước các cột khi thêm cột mới */
+}
+
+thead {
+    background-color: #0d6efd;
+    color: white;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px 16px;
+    border: 1px solid #dee2e6;
     text-align: left;
-    word-wrap: break-word; /* Đảm bảo văn bản trong bảng không bị tràn ra ngoài */
+    vertical-align: middle;
 }
 
-th {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
+tbody tr:hover {
+    background-color: #f8f9fa;
 }
 
+/* Action column */
 td.action {
-    text-align: right;
     white-space: nowrap;
-    padding-right: 10px;
+    text-align: left;
 }
 
 td.action a {
+    margin: 0 4px;
     text-decoration: none;
-    color: blue;
-    display: inline-block;
-    margin: 0 3px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }
 
-td.action span.separator {
-    margin: 0 2px;
-    color: #888;
+td.action a:hover {
+    opacity: 0.9;
+}
+
+td.action a:nth-child(1) {
+    background-color: #6c757d;
+    color: white;
+}
+
+td.action a:nth-child(3) {
+    background-color: #ffc107;
+    color: black;
+}
+
+td.action a:nth-child(5) {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Pagination */
+nav[role="navigation"] {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .pagination {
-    margin-top: 15px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
-.pagination button {
-    background: #007bff;
+.pagination .page-item {
+    margin: 0 3px;
+}
+
+.pagination .page-link {
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #0d6efd;
+    border: 1px solid #dee2e6;
+}
+
+.pagination .page-link:hover {
+    background-color: #e2e6ea;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
     color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 0 5px;
-}
-
-.pagination button:hover {
-    background: #0056b3;
+    border-color: #0d6efd;
 }
 
 footer {
-    margin-top: 20px;
-    padding: 10px;
-    background: #333;
+    background-color: #0d6efd;
     color: white;
-    width: 100%; /* Đảm bảo footer kéo dài hết chiều rộng */
-    position: relative;
-    box-sizing: border-box; /* Đảm bảo không có độ rộng thừa do padding */
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh Sách Người Dùng</title>
     <link rel="stylesheet" href="{{ asset('assets/css/list.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,9 +23,8 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Phone</th>
-                    <th>Address</th>
-                    <th>Action</th>
+                    <th>Roles</th>
+                    <th class="action">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,8 +33,14 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>{{ $user->phone }}</td>
-                        <td>{{ $user->address }}</td>
+                        <td>
+                            @foreach($user->roles as $role)
+                                <a href="{{ route('user.role', ['id' => $role->id]) }}">
+                                    {{ $role->name . '-' }}
+                                </a>
+                            @endforeach
+                        </td>
+
                         <td class="action">
                             <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a>
                             <span class="separator">|</span>
@@ -47,14 +53,8 @@
                 @endforeach
             </tbody>
         </table>
-
-        <div class="pagination">
-            <button id="prevPage">Previous</button>
-            <span id="pageNumbers"></span>
-            <button id="nextPage">Next</button>
-        </div>
+        {!! $users->withQueryString()->links('pagination::bootstrap-5') !!}
     </div>
-
     <footer>
         <p>Lập trình web @2025</p>
     </footer>
