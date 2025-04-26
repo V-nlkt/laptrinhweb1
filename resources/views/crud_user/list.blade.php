@@ -24,6 +24,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Roles</th>
+                    <th>Orders</th>
                     <th class="action">Action</th>
                 </tr>
             </thead>
@@ -40,7 +41,13 @@
                                 </a>
                             @endforeach
                         </td>
-
+                        <td>
+                            @foreach($user->orders as $order)
+                                <a href="{{ route('user.order', ['id' => $order->id]) }}" style="display: inline-block; margin: 2px;">
+                                    {{ $order->id }}
+                                </a>
+                            @endforeach
+                        </td>
                         <td class="action">
                             <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a>
                             <span class="separator">|</span>
